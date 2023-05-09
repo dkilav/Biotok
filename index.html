@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Heebo&family=My+Soul&display=swap" rel="stylesheet">
+   <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css"
+      integrity="sha256-x8PYmLKD83R9T/sYmJn1j3is/chhJdySyhet/JuHnfY=" crossorigin="anonymous" />
+   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js"></script>
+   <title>Postik</title>
+   <link href="output.css" rel="stylesheet">
+</head>
+
+<body class="w-full h-full bg-violet-950 text-[#21243d] font-heebo">
+   <div class="container max-w-[1150px] w-full h-screen mx-auto">
+      <div x-data="{ currentPage: 'home' }">
+         <div x-data="{ currentPage: 'home' }">
+            <nav class="fixed left-0 right-0 top-0 mx-auto w-full max-w-[1150px] bg-yellow-800 py-4">
+               <div class="container m-auto mx-auto flex w-full max-w-[850px] items-center justify-between text-white">
+                  <h1 class="ml-4 py-3 text-xl font-semibold italic font-soul">Wladder</h1>
+                  <ul class="mr-4 hidden cursor-pointer items-center gap-6 py-3 text-base font-semibold md:flex">
+                     <a href="#" @click="currentPage = 'home'" class="hover:text-red-600">Home</a>
+                     <a href="#" @click="currentPage = 'about'" class="hover:text-red-600">About</a>
+                     <a href="#" @click="currentPage = 'contact'" class="hover:text-red-600">Contact</a>
+                     <a href="#" @click="currentPage = 'services'" class="hover:text-red-600">Services</a>
+                  </ul>
+                  <button class="group mx-2 block rounded px-4 py-3 hover:bg-yellow-700 focus:outline-none md:hidden">
+                     <div class="mb-1 h-1 w-5 bg-white"></div>
+                     <div class="mb-1 h-1 w-5 bg-white"></div>
+                     <div class="mb-1 h-1 w-5 bg-white"></div>
+                     <div
+                        class="absolute -right-full top-0 h-screen w-8/12 transform border bg-yellow-800 opacity-0 transition-all duration-300 group-focus:right-0 group-focus:opacity-100">
+                        <ul class="flex w-full cursor-pointer flex-col items-center gap-6 py-3 text-base font-semibold">
+                           <a href="#" @click="currentPage = 'home'">Home</a>
+                           <a href="#" @click="currentPage = 'about'">About</a>
+                           <a href="#" @click="currentPage = 'contact'">Contact</a>
+                           <a href="#" @click="currentPage = 'services'">Services</a>
+                        </ul>
+                     </div>
+                  </button>
+               </div>
+            </nav>
+            <!--! home start -->
+            <div x-show="currentPage === 'home'">
+               <section class="bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100 pt-12">
+                  <div class="container max-w-[850px] mx-auto  py-12">
+                     <div class="grid  xs:grid-cols-1 lg:grid-cols-2">
+                        <div class=" mx-auto order-2 lg:order-1 ">
+                           <article class="prose md:prose-md">
+                              <h1 class="py-8  lg:pt-24 max-w-[506px] xs:text-center lg:text-left  font-bold">Hi, I am
+                                 John,
+                                 Creative Technologist</h1>
+                           </article>
+                           <p
+                              class="lg:py-8 max-w-[487px] px-2 xs:text-center sm:text-center md:text-center lg:text-left leading-5">
+                              Amet minim mollit non deserunt
+                              ullamco est sit aliqua
+                              dolor do amet sint. Velit officia
+                              consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                           <a href="#"
+                              class="my-4 flex lg:ml-0 xs:mx-auto  px-6 py-2  w-48 border-2 font-semibold bg-red text-white  border-red">Download
+                              Resume</a>
+                        </div>
+                        <div class="pt-12 grid md:justify-center lg:justify-end order-1">
+                           <img src="img/elipse.1.png" class="mx-auto h-[243px] w-[243px] " alt="">
+                        </div>
+                     </div>
+                  </div>
+               </section>
+
+               <section
+                  class="max-w-[1150px] w-full mx-auto pb-12 bg-gradient-to-r from-pink-100 via-purple-100 to-indigo-100">
+                  <div class="container max-w-[850px] h-full mx-auto">
+                     <ul class="py-6 flex justify-between">
+                        <li class="mx-auto font-semibold lg:ml-2 lg:text-[22px] md:text-[18px]">Recent posts</li>
+                        <li><a href="#" class="hidden lg:block">Wev all</a></li>
+                     </ul>
+                     <div class="grid justify-center sm:grid-cols-1 lg:grid-cols-2 px-0 gap-4">
+                        <div class="mx-auto max-w-[419px] h-[295px] bg-white px-3">
+                           <h2 class="text-[28px] font-bold">Making a design system from scratch</h2>
+                           <ul class="flex py-3">
+                              <li class="mr-8">12 Feb 2020</li>|
+                              <li class="ml-8">Design, Pattern</li>
+                           </ul>
+                           <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                              consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                        </div>
+                        <div class="mx-auto max-w-[419px] h-[295px] bg-white px-3">
+                           <h2 class="text-[28px] font-bold">Creating pixel perfect icons in Figma</h2>
+                           <ul class="flex py-3">
+                              <li class="mr-8">12 Feb 2020</li>|
+                              <li class="ml-8">Figma, Icon Design</li>
+                           </ul>
+                           <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                              consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+
+
+               <section
+                  class="max-w-[1150px] w-full mx-auto pt-3 pb-10 bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100">
+                  <div class="container max-w-[850px] mx-auto pt-12">
+                     <h3 class="text-[22px] px-1 font-medium ">Featured works</h3>
+                     <ul class="flex flex-wrap  mb-8">
+                        <li class="p-1 w-full lg:w-1/3  flex justify-center">
+                           <img src="img/2.png" class="max-w-[720px] w-full h-auto grid justify-center" alt="">
+                        </li>
+                        <li class="p-1 max-w-[600px] w-full   lg:w-2/3">
+                           <article class="prose xl:prose-lg">
+                              <h2 class="font-bold text-left">Designing Dashboards</h2>
+                           </article>
+                           <ul class="gap-9 py-4 lg:text-left xs:text-center">
+                              <li class="font-extrabold text-left text-white w-16  bg-black px-3 rounded-3xl">2020
+                              </li>
+                              <li class="text-xl text-left">Dashboard</li>
+                           </ul>
+                           <p class="lg:mx-auto md-text-center">Amet minim mollit non deserunt ullamco est sit aliqua
+                              dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam
+                              consequat sunt nostrud amet.</p>
+                        </li>
+                     </ul>
+                     <ul class="flex flex-wrap mb-8">
+                        <li class="p-1 w-full lg:w-1/3  flex justify-center">
+                           <img src="/img/3.png" class="w-full h-full grid justify-center" alt="">
+                        </li>
+                        <li class="p-1 lg:w-2/3">
+                           <article class="prose lg:prose-md">
+                              <h2 class="font-bold text-left">Vibrant Portraits of 2020</h2>
+                           </article>
+                           <ul class="gap-9 py-4 lg:text-left xs:text-center">
+                              <li class="font-extrabold text-left text-white w-16  bg-black px-3 rounded-3xl">2018
+                              </li>
+                              <li class="text-xl text-left">Illustration</li>
+                           </ul>
+                           <p class="lg:mx-auto md-text-center">Amet minim mollit non deserunt ullamco est sit aliqua
+                              dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam
+                              consequat sunt nostrud amet.</p>
+                        </li>
+                     </ul>
+                     <ul class="flex flex-wrap pb-8">
+                        <li class="p-1 w-full lg:w-1/3  flex justify-center">
+                           <img src="img/4.png" class="w-full h-full grid justify-center" alt="">
+                        </li>
+                        <li class="p-1 lg:w-2/3">
+                           <article class="prose xl:prose-lg">
+                              <h2 class="font-bold text-left">36 Days of Malayalam type</h2>
+                           </article>
+                           <ul class="gap-9 py-4 lg:text-left xs:text-center">
+                              <li class="font-extrabold text-left text-white w-16 bg-black px-3 rounded-3xl">2018
+                              </li>
+                              <li class="text-xl text-left">Typography</li>
+                           </ul>
+                           <p class="lg:mx-auto md-text-center">Amet minim mollit non deserunt ullamco est sit aliqua
+                              dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam
+                              consequat sunt nostrud amet.</p>
+                        </li>
+                     </ul>
+
+                  </div>
+               </section>
+
+               <footer class="max-w-[1150px] mx-auto bg-gradient-to-r from-pink-100 via-purple-100 to-indigo-100">
+                  <ul class="flex justify-center gap-x-6 items-center lg:pt-32 xs:pt-16 pb-4">
+                     <li><img src="img/fb.png" alt=""></li>
+                     <li><img src="img/vector-1.png" class="mt-.8 rounded-md border-4 border-black p-1" alt=></li>
+                     <li><img src="img/twit.png" alt=""></li>
+                     <li><img src="img/linkedin.png" alt=""></li>
+                  </ul>
+                  <p class="text-center pb-8">Copyright ©2020 All rights reserved </p>
+               </footer>
+            </div>
+            <!--! home end -->
+
+            <!--! works start -->
+            <div x-show="currentPage === 'about'">
+               <section class="max-w-[1150px] mx-auto bg-gradient-to-r from-pink-100 via-purple-100 to-indigo-100">
+
+                  <div class="container mx-auto py-12 px-3 max-w-[850px] w-full h-full">
+                     <h2 class="text-black text-4xl font-bold pt-28">Blog</h2>
+                     <div class="py-6">
+                        <h3 class="text-3xl font-semibold">UI Interactions of the week</h3>
+                        <ul class="flex py-2 gap-x-4">
+                           <li>12 feb 2019</li>|
+                           <li>Express, Handlebars</li>
+                        </ul>
+                        <p class="mx-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                           Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud
+                           amet.
+                        </p>
+                     </div>
+                     <div class="py-12">
+                        <h3 class="text-3xl font-semibold">UI Interactions of the week</h3>
+                        <ul class="flex py-2 gap-x-4">
+                           <li>12 feb 2019</li>|
+                           <li>Express, Handlebars</li>
+                        </ul>
+                        <p class="mx-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                           Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud
+                           amet.
+                        </p>
+                     </div>
+                     <div class="py-12">
+                        <h3 class="text-3xl font-semibold">UI Interactions of the week</h3>
+                        <ul class="flex py-2 gap-x-4">
+                           <li>12 feb 2019</li>|
+                           <li>Express, Handlebars</li>
+                        </ul>
+                        <p class="mx-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                           Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud
+                           amet.
+                        </p>
+                     </div>
+                     <div class="py-12">
+                        <h3 class="text-3xl font-semibold">UI Interactions of the week</h3>
+                        <ul class="flex py-2 gap-x-4">
+                           <li>12 feb 2019</li>|
+                           <li>Express, Handlebars</li>
+                        </ul>
+                        <p class="mx-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                           Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud
+                           amet.
+                        </p>
+                     </div>
+                  </div>
+                  <footer class="max-w-[1150px] mx-auto bg-gradient-to-r from-pink-100 via-purple-100 to-indigo-100">
+                     <ul class="flex justify-center gap-6 pt-12 pb-4">
+                        <li><img src="img/fb.png" alt=""></li>
+                        <li><img src="img/vector-1.png" class="mt-.8 rounded-md border-4 border-black p-1" alt=></li>
+                        <li><img src="img/twit.png" alt=""></li>
+                        <li><img src="img/linkedin.png" alt=""></li>
+                     </ul>
+                     <p class="text-center pb-12">Copyright ©2020 All rights reserved </p>
+                  </footer>
+               </section>
+            </div>
+            <!--! works end -->
+
+            <!--! blog start -->
+            <div x-show="currentPage === 'contact'">
+               <section
+                  class="max-w-[1150px] w-full h-full mx-auto py-12 bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100">
+
+                  <div class="container mx-auto py-12 px-3 max-w-[850px] w-full h-full">
+                     <h2 class="mt-12 pb-6 text-black text-[34px] font-black">Work</h2>
+                     <ul class="flex flex-wrap  mb-8">
+                        <li class="p-1 w-full lg:w-1/3  flex justify-center">
+                           <img src="img/2.png" class="max-w-[720px] w-full h-auto grid justify-center" alt="">
+                        </li>
+                        <li class="p-1 max-w-[600px] w-full   lg:w-2/3">
+                           <article class="prose xl:prose-lg">
+                              <h2 class="font-bold text-left">Designing Dashboards</h2>
+                           </article>
+                           <ul class="gap-9 py-4 lg:text-left xs:text-center">
+                              <li class="font-extrabold text-left text-white w-16  bg-black px-3 rounded-3xl">2020
+                              </li>
+                              <li class="text-xl text-left">Dashboard</li>
+                           </ul>
+                           <p class="lg:mx-auto md-text-center">Amet minim mollit non deserunt ullamco est sit aliqua
+                              dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam
+                              consequat sunt nostrud amet.</p>
+                        </li>
+                     </ul>
+                     <ul class="flex flex-wrap mb-8">
+                        <li class="p-1 w-full lg:w-1/3  flex justify-center">
+                           <img src="img/3.png" class="w-full h-full grid justify-center" alt="">
+                        </li>
+                        <li class="p-1 lg:w-2/3">
+                           <article class="prose lg:prose-md">
+                              <h2 class="font-bold text-left">Vibrant Portraits of 2020</h2>
+                           </article>
+                           <ul class="gap-9 py-4 lg:text-left xs:text-center">
+                              <li class="font-extrabold text-left text-white w-16  bg-black px-3 rounded-3xl">2018
+                              </li>
+                              <li class="text-xl text-left">Illustration</li>
+                           </ul>
+                           <p class="lg:mx-auto md-text-center">Amet minim mollit non deserunt ullamco est sit aliqua
+                              dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam
+                              consequat sunt nostrud amet.</p>
+                        </li>
+                     </ul>
+                     <ul class="flex flex-wrap pb-8">
+                        <li class="p-1 w-full lg:w-1/3  flex justify-center">
+                           <img src="img/4.png" class="w-full h-full grid justify-center" alt="">
+                        </li>
+                        <li class="p-1 lg:w-2/3">
+                           <article class="prose xl:prose-lg">
+                              <h2 class="font-bold text-left">36 Days of Malayalam type</h2>
+                           </article>
+                           <ul class="gap-9 py-4 lg:text-left xs:text-center">
+                              <li class="font-extrabold text-left text-white w-16 bg-black px-3 rounded-3xl">2018
+                              </li>
+                              <li class="text-xl text-left">Typography</li>
+                           </ul>
+                           <p class="lg:mx-auto md-text-center">Amet minim mollit non deserunt ullamco est sit aliqua
+                              dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam
+                              consequat sunt nostrud amet.</p>
+                        </li>
+                     </ul>
+                     <ul class="flex flex-wrap pb-8">
+                        <li class="p-1 w-full lg:w-1/3  flex justify-center">
+                           <img src="img/5.png" class="w-full h-full grid justify-center" alt="">
+                        </li>
+                        <li class="p-1 lg:w-2/3">
+                           <article class="prose xl:prose-lg">
+                              <h2 class="font-bold text-left">Components</h2>
+                           </article>
+                           <ul class="gap-9 py-4 lg:text-left xs:text-center">
+                              <li class="font-extrabold text-left text-white w-16 bg-black px-3 rounded-3xl">2018
+                              </li>
+                              <li class="text-xl text-left">Components, Design</li>
+                           </ul>
+                           <p class="lg:mx-auto md-text-center">Amet minim mollit non deserunt ullamco est sit aliqua
+                              dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam
+                              consequat sunt nostrud amet.</p>
+                        </li>
+                     </ul>
+                  </div>
+                  <footer class="max-w-[1150px] mx-auto bg-gradient-to-r from-pink-100 via-purple-100 to-indigo-100">
+                     <ul class="flex justify-center gap-6 pt-12 pb-4">
+                        <li><img src="img/fb.png" alt=""></li>
+                        <li><img src="img/vector-1.png" class="mt-.8 rounded-md border-4 border-black p-1" alt=></li>
+                        <li><img src="img/twit.png" alt=""></li>
+                        <li><img src="img/linkedin.png" alt=""></li>
+                     </ul>/
+                     <p class="text-center pb-12">Copyright ©2020 All rights reserved </p>
+                  </footer>
+               </section>
+            </div>
+            <div x-show="currentPage === 'services'">
+               <section
+                  class="max-w-[1150px] w-full h-full mx-auto py-12 bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100">
+                  <div class="container mx-auto py-12 px-3 max-w-[850px] w-full h-full">
+                     <h2 class="md:mt-32 py-6 max-w-[506px] font-extrabold text-black text-[34px]">Designing Dashboards
+                        with usability in mind</h2>
+                     <ul class="flex gap-3 py-6 ">
+                        <li class="text-[18px] font-extrabold text-white bg-red px-3 h-8 py-0.5 rounded-2xl">2020</li>
+                        <li class="text-xl text-[#21243D]
+                     ]">Dashboard, User Experience Design</li>
+                     </ul>
+                     <p class="max-w-[681px] pb-10">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+                        sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud
+                        amet.</p>
+                     <div>
+                        <img src="img/rectangle 4-1.png" class="flex mx-auto md:ml-0 max-w-[681px] w-full pb-10">
+                     </div>
+                     <article class="prose lg:prose-xl mt-8">
+                        <h2>Heading 1</h2>
+                        <h3>Heading 2</h3>
+                        <p class="line-clamp-none">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+                           sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt
+                           nostrud
+                           amet.</p>
+                     </article>
+                     <img src="img/Rectangle 5@2x.png" alt="">
+                     <img src="img/Rectangle 6.png" alt="">
+                  </div>
+               </section>
+               <footer class="max-w-[1150px] mx-auto bg-gradient-to-r from-pink-100 via-purple-100 to-indigo-100">
+                  <ul class="flex justify-center gap-6 pt-2 pb-4">
+                     <li><img src="img/fb.png" alt=""></li>
+                     <li><img src="img/vector-1.png" class="mt-.8 rounded-md border-4 border-black p-1" alt=></li>
+                     <li><img src="img/twit.png" alt=""></li>
+                     <li><img src="img/linkedin.png" alt=""></li>
+                  </ul>/
+                  <p class="text-center pb-12">Copyright ©2020 All rights reserved </p>
+               </footer>
+            </div>
+         </div>
+
+      </div>
+      <script src="js/tailwind.min.js"></script>
+</body>
+
+</html>
